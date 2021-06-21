@@ -1,0 +1,61 @@
+{   
+    "Monsters" :
+    {
+        "Monster_Name":
+        {
+            "Name"  : "",
+            "Tags"  : [""],
+            "Rank"  : "",
+            "HP"    : "",
+    
+            "STR" : "",
+            "DEX" : "",
+            "POW" : "",
+            "INT" : "",
+    
+            "Evasion"           : "",
+            "Resistance"        : "",
+            "Physical Defense"  : "",
+            "Magic Defense"     : "",
+            
+            "Movement Speed"    : "",
+            "Initiative"        : "",
+            
+            "Identification Difficulty" : "",
+            "Hate Multiplier"           : "",
+    
+            "Abilities" :
+            [
+                {
+                    "Name"   : "",
+                    "Tags"   : [],
+                    "Timing" : "",
+                    "Limit"  : "",
+                    "Range"  : "",
+                    "Check"  : "",
+                    "Effect" : "",
+                    "Extra"  : ""
+                }
+            ],
+    
+            "Drops" :
+            {
+                    "1-6" : ""
+            }
+        }
+    },
+
+    "Props" :
+    {
+        "Prop_Name":
+        {
+            "Name" :    "",
+            "Rank" :    "",
+            "Tags" :    [],
+            "Detect" :  "",
+            "Analyse" : "",
+            "Disable" : "",
+            "Effect" :  ""
+        }
+    }
+}
