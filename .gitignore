@@ -13,7 +13,8 @@
 # text and spreadsheet
 *.txt
 *.xlsx
-input.json
+*.json
+!template.json
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
