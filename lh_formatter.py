@@ -70,7 +70,7 @@ for x in data['Monsters'].keys():
         output += bold("Effect") + ": " + ability['Effect'] + "\n"
 
         if ability['Extra']:
-            output += bold("Extra") + ": " + ability['Extra'] + "\n"
+            output +=  ability['Extra'] + "\n"
 
     output += "\n" + undl(bold("Drops")) + ": \n"
     for drops in data['Monsters'][x]['Drops']:
@@ -118,7 +118,7 @@ for x in data['Monsters'].keys():
         output += bold("Effect") + ": " + ability['Effect'] + "\n"
 
         if ability['Extra']:
-            output += bold("Extra") + ": " + ability['Extra'] + "\n"
+            output += ability['Extra'] + "\n"
 
     
     # Unidentified portion
@@ -341,7 +341,7 @@ for x in data['Monsters'].keys():
         effect_row_height = 0
 
         if ability['Extra']:
-            ability_str += "\nExtra: " + ability['Extra']
+            ability_str += "\n" + ability['Extra']
             effect_row_height = (len(("Extra: " + ability['Extra'])) // 100)
 
         effect_row_height += (len("Effect: " + ability['Effect']) // 100) + 1
