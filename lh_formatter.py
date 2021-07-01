@@ -89,12 +89,15 @@ for x in data['Monsters'].keys():
     output += "\n"
 
     output += bold("Defense") + ": "
-    if int(data['Monsters'][x]['Physical Defense']) > int(data['Monsters'][x]['Magic Defense']):
-        output += "Physical Defense is superior.\n"
-    elif int(data['Monsters'][x]['Physical Defense']) < int(data['Monsters'][x]['Magic Defense']):
-        output += "Magic Defense is superior.\n"
+    if data['Monsters'][x]['Physical Defense'] and data['Monsters'][x]['Magic Defense']:
+        if int(data['Monsters'][x]['Physical Defense']) > int(data['Monsters'][x]['Magic Defense']):
+            output += "Physical Defense is superior.\n"
+        elif int(data['Monsters'][x]['Physical Defense']) < int(data['Monsters'][x]['Magic Defense']):
+            output += "Magic Defense is superior.\n"
+        else:
+            output += "Defenses are equal.\n"
     else:
-        output += "Defenses are equal.\n"
+        output += "One or both defense values were null.\n"
 
     output += bold("Hate Multiplier") + ": " + data['Monsters'][x]['Hate Multiplier'] + "\n"
 
@@ -409,6 +412,9 @@ for x in data['Props'].keys():
     worksheet.merge_range(row, col , row, col + 5, "", body)
     worksheet.write(row, col, data['Props'][x]['Effect'], body)
     worksheet.set_row_pixels(row, ((len(data['Props'][x]['Effect']) // 100) + 1)* 20)
+
+    row += 1
+    height += 1
 
 
 workbook.close()
