@@ -48,7 +48,12 @@ for x in data['Monsters'].keys():
     output += bold("Initiative") + ": " + data['Monsters'][x]['Initiative'] + "\n"
 
     output += bold("Identification Difficulty") + ": " + data['Monsters'][x]['Identification Difficulty'] + "\t"
-    output += bold("Hate Multiplier") + ": " + data['Monsters'][x]['Hate Multiplier'] + "\n"
+    output += bold("Hate Multiplier") + ": " + data['Monsters'][x]['Hate Multiplier'] + " " * 4
+
+    if data['Monsters'][x]['Fate Points'] and int(data['Monsters'][x]['Fate Points']) > 0:
+        output += bold("Fate Points") + ": " + data['Monsters'][x]['Fate Points'] + "\n"
+    else:
+        output += "\n"
 
     for ability in data['Monsters'][x]['Abilities']:
         output += "\n" + undl(bold(ability['Name'])) + "\n"
@@ -100,6 +105,10 @@ for x in data['Monsters'].keys():
         output += "One or both defense values were null.\n"
 
     output += bold("Hate Multiplier") + ": " + data['Monsters'][x]['Hate Multiplier'] + "\n"
+    output += bold("Initiative") + ": " + data['Monsters'][x]['Initiative'] + "\n"
+    
+    if data['Monsters'][x]['Fate Points'] and int(data['Monsters'][x]['Fate Points']) > 0:
+        output += bold("Fate Points") + ": " + data['Monsters'][x]['Fate Points'] + "\n"
 
     for ability in data['Monsters'][x]['Abilities']:
         output += "\n" + undl(bold(ability['Name'])) + "\n"
@@ -370,7 +379,7 @@ for x in data['Monsters'].keys():
         row += 1
         height += 1
         
-
+    row += 1
     height += 1
 
 for x in data['Props'].keys():
